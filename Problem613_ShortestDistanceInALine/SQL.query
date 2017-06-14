@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+
+# Find the minimum value of the difference between the two point
+SELECT MIN(Point1.x - Point2.x) AS 'shortest'
+
+# Grab two copies of the tables for comparison
+FROM point Point1, point Point2
+
+# Make sure the distance is positive
+WHERE Point1.x - Point2.x > 0
