@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+# Conditions for three sides to create a triangle is
+# that the sum of two sides must be greater than the
+# third for all three sides
+
+SELECT *,
+    CASE WHEN x + y > z AND
+    x + z > y AND
+    y + z > x
+    THEN 'Yes'
+    ELSE 'No'
+END AS 'triangle'
+FROM triangle
